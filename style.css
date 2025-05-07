@@ -1,0 +1,124 @@
+/* --- Grundlayout --- */
+@font-face {
+    font-family: mmc;
+    src: url('./fonts/mmc.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    background-color: #6b5553; /* Hintergrundfarbe aus Screenshot */
+    font-family: mmc, 'Courier New', Courier, monospace; /* Using custom font mmc with retro fallback */
+    color: #ECD7AF; /* Beige Farbe aus Screenshot */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 6rem;
+    margin: 1rem 0 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: bold;
+    text-align: left;
+  }
+  /* --- "Now Playing" Banner --- */
+  .now-playing-banner {
+    background-color: #C9B790;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #6b5553;
+    letter-spacing: 2px;
+  }
+  
+  /* --- Container für Kassetten --- */
+  #spell-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1200px;
+  }
+  
+  /* --- Kassette --- */
+  article {
+    width: 260px;
+    height: 160px;
+    background-color: #ECD7AF;
+    border: 2px solid black;
+    border-radius: 3px;
+    position: relative;
+    padding: 1rem;
+    box-shadow: inset 0 -20px 0 #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  /* --- bunte Streifen --- */
+  article::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #e05260, #f8dc5e, #49a16c, #5da7d4);
+  }
+  
+  /* --- Kassettenspulen --- */
+  .spool {
+    position: absolute;
+    top: 75px;
+    width: 25px;
+    height: 25px;
+    background: #111;
+    border: 6px solid white;
+    border-radius: 50%;
+  }
+  
+  .spool.left {
+    left: 60px;
+  }
+  
+  .spool.right {
+    right: 60px;
+  }
+  
+  /* --- Text-Icons-Zeile --- */
+  .song-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    z-index: 2;
+  }
+  
+  .song-info p {
+    margin: 0;
+  }
+  
+  .icon-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .icon-line i {
+    font-style: normal; /* Icons (optional) kannst du mit Emojis oder Fonts umsetzen */
+  }
