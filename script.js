@@ -21,7 +21,7 @@ function showData(songList) {
         card.innerHTML = `
             <div class="cassette">
                 <div class="label">
-                    <p>🎵 Titel: "${element.title}"</h2>
+                    <p>🎵 Titel: "${element.title}"</p>
                     <p>👤 Interpret: ${element.artist}</p>
                     <p>🕒 Zeit: ${element.time}</p>
                 </div>
@@ -41,7 +41,13 @@ async function startApp() {
     console.log(myData.songList[0]);
 
     showData(myData.songList);
-    updateNowPlayingBanner(myData.songList[0]);
+    // updateNowPlayingBanner(myData.songList[0]);
+    if (myData.songList.length > 0) {
+        updateNowPlayingBanner(myData.songList[0]);
+    } else {
+        banner.textContent = "Aktuell wird kein Song gespielt.";
+    }
 }
 
 startApp(); // <-- Starte alles hier
+setInterval(startApp, 30000); // <-- Alle 30 Sekunden aktualisieren
