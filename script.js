@@ -79,7 +79,7 @@ function updateNowPlayingBanner(song) {
         }
     }
 
-    banner.innerHTML = `<span>NOW PLAYING: ${artist} - "${song.title}" ${formattedTime}</span>`;
+    banner.innerHTML = `<span>NOW PLAYING: ${artist} - "${song.title}" - ${formattedTime} Uhr</span>`;
 }
 
 async function startApp() {

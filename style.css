@@ -34,29 +34,32 @@ body {
   }
   /* --- "Now Playing" Banner --- */
   .banner {
+    position: absolute; /* oder absolute, je nach Design */
+    top: 5em;
+    left: 0;
+    width: 100vw; /* volle Bildschirmbreite */
+    z-index: 1000;
+  
     background-color: #C9B790;
-    width: 100%;
-    padding: 1.3rem;
-    margin-top: 0.5em;
+    padding: 1em 0;
     font-weight: bold;
     font-size: 3rem;
     color: #6b5553;
     letter-spacing: 2px;
-
-    position: relative;
+  
     overflow: hidden;
     white-space: nowrap;
-    padding-left: 10px;
   }
 
 /* --- Animation für den Bannertext --- */
 .banner span {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   white-space: nowrap;
   display: inline-block;
   animation: marquee 12s linear infinite;
   font-weight: bold;
-  font-size: 2rem;
   color: #6b5553;
 }
 
@@ -76,6 +79,7 @@ body {
     gap: 2rem;
     justify-content: center;
     padding: 2rem;
+    margin-top: 8em;
     max-width: 1200px;
   }
   
