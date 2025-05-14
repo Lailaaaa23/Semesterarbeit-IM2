@@ -15,15 +15,43 @@ async function fetchData(url) {
     }
 }
 
+// function showData(songList) {
+//     container.innerHTML = ""; // Alte Songkarten entfernen
+//     songList.forEach((element) => {
+//         let card = document.createElement("article");
+//         card.innerHTML = `
+//             <div class="cassette">
+//                 <div class="label">
+//                     <p>🎵 Titel: "${element.title}"</p>
+//                     <p>👤 Interpret: ${element.artist.name}</p>
+//                     <p>🕒 Zeit: ${new Date(element.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
+//                 </div>
+//             </div>
+//         `;
+//         container.appendChild(card);
+//     });
+// }
+
 function showData(songList) {
+    container.innerHTML = ""; // Vorherige Inhalte löschen
+
     songList.forEach((element) => {
+        // Interpret sicher auslesen – je nach Struktur
+        const artist = element.artist || element.interpreten?.[0] || "Unbekannt";
+        
+        // Zeit schön formatieren
+        const formattedTime = new Date(element.date || element.startTime).toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
         let card = document.createElement("article");
         card.innerHTML = `
             <div class="cassette">
                 <div class="label">
                     <p>🎵 Titel: "${element.title}"</p>
-                    <p>👤 Interpret: ${element.artist}</p>
-                    <p>🕒 Zeit: ${element.time}</p>
+                    <p>👤 Interpret: ${artist.name}</p>
+                    <p>🕒 Zeit: ${formattedTime}</p>
                 </div>
             </div>
         `;
