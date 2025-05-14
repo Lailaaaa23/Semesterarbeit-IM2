@@ -33,16 +33,41 @@ body {
     text-align: left;
   }
   /* --- "Now Playing" Banner --- */
-  .now-playing-banner {
+  .banner {
     background-color: #C9B790;
     width: 100%;
-    padding: 1rem;
-    text-align: center;
+    padding: 1.3rem;
+    margin-top: 0.5em;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 3rem;
     color: #6b5553;
     letter-spacing: 2px;
+
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 10px;
   }
+
+/* --- Animation für den Bannertext --- */
+.banner span {
+  position: absolute;
+  white-space: nowrap;
+  display: inline-block;
+  animation: marquee 12s linear infinite;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #6b5553;
+}
+
+@keyframes marquee {
+  from {
+      left: 100%;
+  }
+  to {
+      left: -100%;
+  }
+}
   
   /* --- Container für Kassetten --- */
   #spell-container {

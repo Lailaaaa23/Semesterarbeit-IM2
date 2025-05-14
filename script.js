@@ -1,7 +1,7 @@
 console.log('hi script.js');
 
 const container = document.querySelector("#spell-container");
-const banner = document.querySelector("#now-playing-banner");
+const banner = document.querySelector(".banner");
 
 const API_URL = "https://il.srgssr.ch/integrationlayer/2.0/srf/songList/radio/byChannel/69e8ac16-4327-4af4-b873-fd5cd6e895a7";
 
@@ -59,9 +59,27 @@ function showData(songList) {
     });
 }
 
+// function updateNowPlayingBanner(song) {
+//     console.log("Aktueller Song für Banner:", song);
+//     banner.textContent = `${song.artist} - ${song.time} NOW PLAYING: "${song.title}"`;
+// }
+
 function updateNowPlayingBanner(song) {
-    console.log("Aktueller Song für Banner:", song);
-    banner.textContent = `${song.artist} - ${song.time} NOW PLAYING: "${song.title}"`;
+    const artist = song.artist?.name || song.interpreten?.[0] || "Unbekannt";
+
+    const rawTime = song.startTime || song.date;
+    let formattedTime = "?";
+    if (rawTime) {
+        const date = new Date(rawTime);
+        if (!isNaN(date)) {
+            formattedTime = date.toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+    }
+
+    banner.innerHTML = `<span>NOW PLAYING: ${artist} - "${song.title}" ${formattedTime}</span>`;
 }
 
 async function startApp() {
