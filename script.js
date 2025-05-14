@@ -35,6 +35,8 @@ async function fetchData(url) {
 function showData(songList) {
     container.innerHTML = ""; // Vorherige Inhalte löschen
 
+    songList = songList.slice(1); // Den ersten Song entfernen
+
     songList.forEach((element) => {
         // Interpret sicher auslesen – je nach Struktur
         const artist = element.artist || element.interpreten?.[0] || "Unbekannt";
