@@ -97,5 +97,45 @@ async function startApp() {
     }
 }
 
+
 startApp(); // <-- Starte alles hier
 setInterval(startApp, 30000); // <-- Alle 30 Sekunden aktualisieren
+
+// Dropdown-Menü zum Laden vergangener Songs
+const archiveSelect = document.querySelector("#archive-select");
+archiveSelect.addEventListener("change", async (event) => {
+    const archiveUrl = event.target.value;
+    if (archiveUrl) {
+        const data = await fetchData(archiveUrl);
+        if (data.songList?.length > 0) {
+            showArchivedSongs(data.songList);
+        }
+    }
+});
+
+// Funktion zum Anzeigen älterer Songs
+function showArchivedSongs(songList) {
+    const archiveContainer = document.querySelector("#archive-container");
+    archiveContainer.innerHTML = ""; // Leeren
+
+    songList.forEach((element) => {
+        const artist = element.artist?.name || element.interpreten?.[0] || "Unbekannt";
+        const formattedTime = new Date(element.date || element.startTime).toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
+        const listItem = document.createElement("li");
+        listItem.textContent = `${formattedTime} – ${artist}: "${element.title}"`;
+        archiveContainer.appendChild(listItem);
+    });
+}
+
+// Funktion zum Nachladen älterer Songs über "next"-Link der API
+async function loadArchivedSongs(url) {
+    const data = await fetchData(url);
+    if (data.songList?.length > 0) {
+        showArchivedSongs(data.songList);
+    }
+    return data;
+}

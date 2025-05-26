@@ -35,7 +35,7 @@ body {
   /* --- "Now Playing" Banner --- */
   .banner {
     position: absolute; /* oder absolute, je nach Design */
-    top: 5em;
+    top: 6em;
     left: 0;
     width: 100vw; /* volle Bildschirmbreite */
     z-index: 1000;
