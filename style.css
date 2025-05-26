@@ -186,6 +186,49 @@ body {
   text-align: center;
 }
 
+/* --- Archiv Dropdown und Songliste --- */
+.archive-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.archive-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+  color: #ECD7AF;
+}
+
+.archive-dropdown {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #C9B790;
+  color: #6b5553;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  font-family: mmc, 'Courier New', Courier, monospace;
+}
+
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.archive-list li {
+  padding: 1rem 0;
+  border-bottom: 3px solid #ECD7AF;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
 /* --- Responsive Design für mobile Geräte --- */
 @media (max-width: 768px) {
   h1 {
@@ -237,47 +280,9 @@ body {
   .header-with-icons h1 {
     font-size: 3rem;
   }
+
+  .archive-list li {
+    font-size: 1rem;
+  }
 }
 
-/* --- Archiv Dropdown und Songliste --- */
-.archive-section {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
-}
-
-.archive-label {
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 1rem;
-  color: #ECD7AF;
-}
-
-.archive-dropdown {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #C9B790;
-  color: #6b5553;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 2rem;
-  font-family: mmc, 'Courier New', Courier, monospace;
-}
-
-.archive-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  padding-left: 2rem;
-}
-
-.archive-list li {
-  padding: 1rem 0;
-  border-bottom: 3px solid #ECD7AF;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #ffffff;
-}

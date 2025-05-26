@@ -15,23 +15,6 @@ async function fetchData(url) {
     }
 }
 
-// function showData(songList) {
-//     container.innerHTML = ""; // Alte Songkarten entfernen
-//     songList.forEach((element) => {
-//         let card = document.createElement("article");
-//         card.innerHTML = `
-//             <div class="cassette">
-//                 <div class="label">
-//                     <p>🎵 Titel: "${element.title}"</p>
-//                     <p>👤 Interpret: ${element.artist.name}</p>
-//                     <p>🕒 Zeit: ${new Date(element.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
-//                 </div>
-//             </div>
-//         `;
-//         container.appendChild(card);
-//     });
-// }
-
 function showData(songList) {
     container.innerHTML = ""; // Vorherige Inhalte löschen
 
@@ -125,7 +108,7 @@ function showArchivedSongs(songList) {
         });
 
         const listItem = document.createElement("li");
-        listItem.textContent = `${formattedTime} – ${artist}: "${element.title}"`;
+        listItem.textContent = `${formattedTime} – ${artist} - "${element.title}"`;
         archiveContainer.appendChild(listItem);
     });
 }
