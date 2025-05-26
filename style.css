@@ -1,13 +1,14 @@
-/* --- Grundlayout --- */
 @font-face {
     font-family: mmc;
     src: url('./fonts/mmc.ttf') format('truetype');
 }
 
+/* --- Grundlayout --- */
+
 body {
     margin: 0;
     background-color: #6b5553; /* Hintergrundfarbe aus Screenshot */
-    font-family: mmc, 'Courier New', Courier, monospace; /* Using custom font mmc with retro fallback */
+    font-family: mmc, 'Courier New', Courier, monospace;
     color: #ECD7AF; /* Beige Farbe aus Screenshot */
     display: flex;
     flex-direction: column;
@@ -34,19 +35,18 @@ body {
   }
   /* --- "Now Playing" Banner --- */
   .banner {
-    position: absolute; /* oder absolute, je nach Design */
+    position: absolute;
     top: 6em;
     left: 0;
-    width: 100vw; /* volle Bildschirmbreite */
+    width: 100vw;
     z-index: 1000;
-  
     background-color: #C9B790;
     padding: 1em 0;
     font-weight: bold;
     font-size: 3rem;
     color: #6b5553;
     letter-spacing: 2px;
-  
+    font-family: 'Space Mono', monospace;
     overflow: hidden;
     white-space: nowrap;
   }
@@ -92,7 +92,7 @@ body {
     border-radius: 3px;
     position: relative;
     padding: 1rem;
-    box-shadow: inset 0 -20px 0 #000;
+    box-shadow: inset 0 -30px 0 #000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -107,7 +107,7 @@ body {
     top: 120px;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 20px;
     background: linear-gradient(to right, #e05260, #f8dc5e, #49a16c, #5da7d4);
   }
   
@@ -236,7 +236,7 @@ body {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .banner {
@@ -273,7 +273,7 @@ body {
   }
 
   .header-with-icons img {
-    width: 100px;
+    width: 120px;
     height: 100px;
   }
 
