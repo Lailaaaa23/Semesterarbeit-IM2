@@ -237,6 +237,7 @@ body {
   .header-with-icons h1 {
     font-size: 3rem;
   }
+<<<<<<< HEAD
 }
 
 /* --- Archiv Dropdown und Songliste --- */
@@ -280,4 +281,6 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   color: #ffffff;
+=======
+>>>>>>> parent of f2f4ce8 (Ergänzung Liste)
 }
