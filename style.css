@@ -237,8 +237,6 @@ body {
   .header-with-icons h1 {
     font-size: 3rem;
   }
-<<<<<<< Updated upstream
-=======
 }
 
 /* --- Archiv Dropdown und Songliste --- */
@@ -282,5 +280,4 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   color: rgb(150, 0, 0);
->>>>>>> Stashed changes
 }
