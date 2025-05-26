@@ -33,12 +33,17 @@ function showData(songList) {
         let card = document.createElement("article");
         card.innerHTML = `
             <div class="cassette">
-                <div class="label">
+                <div class="label-song">
                     <p>🎵 Titel: "${element.title}"</p>
                     <p>👤 Interpret: ${artist.name}</p>
+                </div>
+                <div class="label-time">
                     <p>🕒 Zeit: ${formattedTime}</p>
                 </div>
             </div>
+            <div class="label-image">
+                    <img src="./images/löcher_v2.png" alt="Kassette mit Löchern">
+                </div>
         `;
         container.appendChild(card);
     });
@@ -81,7 +86,7 @@ async function startApp() {
 }
 
 startApp(); // <-- Starte alles hier
-setInterval(startApp, 30000); // <-- Alle 30 Sekunden aktualisieren
+// setInterval(startApp, 30000); <-- Alle 30 Sekunden aktualisieren
 
 // Dropdown-Menü zum Laden vergangener Songs
 const archiveSelect = document.querySelector("#archive-select");
