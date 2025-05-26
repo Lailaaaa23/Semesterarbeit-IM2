@@ -163,8 +163,6 @@ body {
   .icon-line i {
     font-style: normal; /* Icons (optional) kannst du mit Emojis oder Fonts umsetzen */
   }
-<<<<<<< HEAD
-=======
 
   /* --- Header mit Icon-Bildern links und rechts vom Titel --- */
 .header-with-icons {
@@ -239,9 +237,4 @@ body {
   .header-with-icons h1 {
     font-size: 3rem;
   }
-<<<<<<< HEAD
 }
->>>>>>> parent of f2f4ce8 (Ergänzung Liste)
-=======
-}
->>>>>>> parent of f2f4ce8 (Ergänzung Liste)
