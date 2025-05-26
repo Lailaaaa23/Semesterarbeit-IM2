@@ -198,7 +198,7 @@ body {
 }
 
 .archive-label {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   display: block;
   margin-bottom: 1rem;
@@ -206,7 +206,7 @@ body {
 }
 
 .archive-dropdown {
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 0.5rem 1rem;
   background-color: #C9B790;
   color: #6b5553;
@@ -314,5 +314,9 @@ body {
   
   .label-image img {
   top: -35.3%;
+}
+
+.archive-label {
+  font-size: 2rem;
 }
 }
