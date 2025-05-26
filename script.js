@@ -86,7 +86,7 @@ async function startApp() {
 }
 
 startApp(); // <-- Starte alles hier
-// setInterval(startApp, 30000); <-- Alle 30 Sekunden aktualisieren
+setInterval(startApp, 60000); // <-- Alle 60 Sekunden aktualisieren
 
 // Dropdown-Menü zum Laden vergangener Songs
 const archiveSelect = document.querySelector("#archive-select");
