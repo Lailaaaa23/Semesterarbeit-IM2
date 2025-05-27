@@ -32,6 +32,7 @@ body {
     margin: 0;
     font-weight: bold;
     text-align: left;
+    color: #6c5553;
   }
   /* --- "Now Playing" Banner --- */
   .banner {
@@ -86,28 +87,29 @@ body {
   /* --- Kassette --- */
   article {
     width: 260px;
-    height: 160px;
+    height: 135px;
     background-color: #ECD7AF;
     border: 2px solid black;
-    border-radius: 3px;
+    border-radius: 10px;
     position: relative;
-    padding: 1rem;
-    box-shadow: inset 0 -30px 0 #000;
-    display: flex;
+    padding: 0.8rem 1rem 0.3rem 1rem;
+    box-shadow: 0em 2.5em 0em 0em rgb(0, 0, 0);
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
     color: #fff;
     font-size: 0.9rem;
+    margin-bottom: 2em;
   }
   
   /* --- bunte Streifen --- */
   article::before {
     content: "";
     position: absolute;
-    top: 120px;
+    top: 84px;
     left: 0;
     width: 100%;
-    height: 20px;
+    height: 40px;
     background: linear-gradient(to right, #e05260, #f8dc5e, #49a16c, #5da7d4);
   }
   
@@ -196,7 +198,7 @@ body {
 }
 
 .archive-label {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   display: block;
   margin-bottom: 1rem;
@@ -204,14 +206,13 @@ body {
 }
 
 .archive-dropdown {
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 0.5rem 1rem;
   background-color: #C9B790;
   color: #6b5553;
   border: none;
   border-radius: 5px;
   margin-bottom: 2rem;
-  font-family: mmc, 'Courier New', Courier, monospace;
 }
 
 .archive-list {
@@ -227,6 +228,31 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   color: #ffffff;
+}
+
+.cassette {
+  flex-direction: inherit;
+    display: flex;
+    height: 100%;
+}
+
+.label-time {
+  margin-top: auto;
+}
+
+.label-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.label-image img {
+  position: absolute;
+  top: -32.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 143px;
+  height: auto;
 }
 
 /* --- Responsive Design für mobile Geräte --- */
@@ -258,8 +284,8 @@ body {
   }
 
   article {
-    height: 12em;
-    padding: 1rem;
+    height: 11em;
+    padding: 0.8rem 1rem 0.3rem 1rem;
     font-size: 0.8rem;
   }
 
@@ -284,5 +310,12 @@ body {
   .archive-list li {
     font-size: 1rem;
   }
+  
+  .label-image img {
+  top: -35.3%;
 }
 
+.archive-label {
+  font-size: 2rem;
+}
+}
