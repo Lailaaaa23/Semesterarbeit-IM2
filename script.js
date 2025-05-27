@@ -49,11 +49,6 @@ function showData(songList) {
     });
 }
 
-// function updateNowPlayingBanner(song) {
-//     console.log("Aktueller Song für Banner:", song);
-//     banner.textContent = `${song.artist} - ${song.time} NOW PLAYING: "${song.title}"`;
-// }
-
 function updateNowPlayingBanner(song) {
     const artist = song.artist?.name || song.interpreten?.[0] || "Unbekannt";
 

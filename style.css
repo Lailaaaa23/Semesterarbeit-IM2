@@ -94,7 +94,6 @@ body {
     position: relative;
     padding: 0.8rem 1rem 0.3rem 1rem;
     box-shadow: 0em 2.5em 0em 0em rgb(0, 0, 0);
-    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
     color: #fff;
