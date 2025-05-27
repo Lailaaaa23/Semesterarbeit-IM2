@@ -12,6 +12,12 @@ Ressourcen:
 Dozierende, YT-Videos, ChatGTP, CoPilot
 
 Promts:
+Gute Promts:
+"Da nun auf der ersten Kassette auch der gerade laufende Song angezeigt wird, muss immer die erste Kassette ausgeblendet werden. Wie kann ich das machen?" --> ChatGPT konnte mir genau erklären, wie ich das am Besten machen soll, damit am Ende die erste Kassette ausgeblendet wird.
+
+"Strukturiere mir den Code und lösche den Code, der überflüssig ist."
+--> ChatGPT hat mir den Code mit auskommentiertem Text strukturiert und den überflüssigen code entfernt.
+
 Weniger guter Prompt:
-Sieh dir diese beiden Designs an. Der erste Screenshot kommt von meiner programmierten Webseite. Der zweite Screenshot zeigt, wie es eigentlich aussehen sollte. Wir programmieren mit javascript, html und css. Unser css sieht aktuell so aus: (--> css-Code)
+"Sieh dir diese beiden Designs an. Der erste Screenshot kommt von meiner programmierten Webseite. Der zweite Screenshot zeigt, wie es eigentlich aussehen sollte. Wir programmieren mit javascript, html und css. Unser css sieht aktuell so aus: (--> css-Code)"
 --> Anhand von diesem Prompt hätte ich gerne unser css angepasst. Der angepasste Code von ChatGPT führte allerdings nicht zum gewünschten Resultat. Schliesslich haben wir das Design auch nicht anhand von css angefertigt, sondern ein Bild dafür eingebettet.
