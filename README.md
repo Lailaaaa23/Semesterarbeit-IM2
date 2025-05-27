@@ -12,3 +12,6 @@ Ressourcen:
 Dozierende, YT-Videos, ChatGTP, CoPilot
 
 Promts:
+Weniger guter Prompt:
+Sieh dir diese beiden Designs an. Der erste Screenshot kommt von meiner programmierten Webseite. Der zweite Screenshot zeigt, wie es eigentlich aussehen sollte. Wir programmieren mit javascript, html und css. Unser css sieht aktuell so aus: (--> css-Code)
+--> Anhand von diesem Prompt hätte ich gerne unser css angepasst. Der angepasste Code von ChatGPT führte allerdings nicht zum gewünschten Resultat. Schliesslich haben wir das Design auch nicht anhand von css angefertigt, sondern ein Bild dafür eingebettet.
